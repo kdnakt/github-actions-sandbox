@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: say hello
-        run: echo 'Hi, I'm ${{ inputs.name }}.'
+        run: echo 'Hi, I\'m ${{ inputs.name }}.'
       - name: print age
-        run: echo 'I'm ${{ inputs.age }} years old.'
+        run: echo 'I\'m ${{ inputs.age }} years old.'
