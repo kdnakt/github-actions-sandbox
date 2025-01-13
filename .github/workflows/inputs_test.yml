@@ -21,8 +21,9 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      # escape whitespace: https://github.com/actions/runner/issues/1019
       - name: print log level
-        run: echo 'Log level is: ${{ inputs.logLevel }}'
+        run: echo 'Log level is:\ ${{ inputs.logLevel }}'
       # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#literals
       - name: say hello
         run: echo 'Hi, I''m ${{ inputs.name }}.'
