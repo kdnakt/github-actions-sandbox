@@ -1,0 +1,13 @@
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Your name'
+        required: true
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello
+        run: echo 'Hi, ${{ inputs.name }}'
