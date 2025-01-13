@@ -6,11 +6,23 @@ on:
       name:
         description: 'Your name'
         required: true
+      # https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
 
 jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: print log level
+        run: echo 'Log level is: ${{ inputs.logLevel }}'
       # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#literals
       - name: say hello
         run: echo 'Hi, I''m ${{ inputs.name }}.'
