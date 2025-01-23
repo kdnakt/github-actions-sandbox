@@ -31,6 +31,6 @@ jobs:
       - name: say hello
         run: echo 'Hi, I''m ${{ inputs.name }}.'
       - name: say hello again
-        run: echo Hi, I''m ${{ inputs.name }}.
+        run: echo "Hi, I'm ${{ inputs.name }}."
       - name: print age
         run: echo 'I''m ${{ inputs.age }} years old.'
