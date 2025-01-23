@@ -23,7 +23,8 @@ jobs:
     steps:
       # escape whitespace: https://github.com/actions/runner/issues/1019
       - name: print log level
-        run: echo 'Log level is:\ ${{ inputs.logLevel }}'
+        run: |
+          echo 'Log level is: ${{ inputs.logLevel }}'
       - name: print log level again
         run: 'echo "Again, log level is: ${{ inputs.logLevel }}"'
       # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#literals
