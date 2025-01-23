@@ -30,5 +30,7 @@ jobs:
       # https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#literals
       - name: say hello
         run: echo 'Hi, I''m ${{ inputs.name }}.'
+      - name: say hello again
+        run: echo Hi, I'm ${{ inputs.name }}.
       - name: print age
         run: echo 'I''m ${{ inputs.age }} years old.'
